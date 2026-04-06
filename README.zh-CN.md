@@ -108,16 +108,3 @@ pip install -r code/wpheadmixer/requirements.txt
 
 - 项目代码保留许可文件：[code/wpheadmixer/LICENSE](code/wpheadmixer/LICENSE)
 - vendored 的小波依赖代码位于 [code/wpheadmixer/pytorch_wavelets/](code/wpheadmixer/pytorch_wavelets/)，其目录中也保留了对应许可证文件。
-
-## 引用
-
-如果你使用了本仓库或其配套材料，请引用对应论文。
-
-```bibtex
-@article{wpheadmixer_companion,
-  title   = {WPHeadMixer: A Wavelet-Patch Forecasting Framework with Modular Branch Heads for Long-Term Time Series Forecasting},
-  author  = {Jianing Long and Jiangtao Yan},
-  year    = {2026},
-  note    = {Code, data, and evidence release}
-}
-```
