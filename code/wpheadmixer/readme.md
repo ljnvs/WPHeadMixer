@@ -23,9 +23,9 @@ Optional:
 
 - install `thop` only if you want to use the FLOPs helper in `exp/exp_main.py`
 
-## Expected Data Layout
+## Bundled Data Layout
 
-Create a `data/` directory under this folder and place the public benchmark datasets as follows:
+The six benchmark datasets used by the released paper package are already included under `data/`:
 
 ```text
 data/
@@ -44,7 +44,7 @@ data/
     traffic.csv
 ```
 
-The released paper package mainly uses:
+The released paper package bundles and uses:
 
 - `ETTh1`
 - `ETTh2`
@@ -52,6 +52,18 @@ The released paper package mainly uses:
 - `ETTm2`
 - `Weather`
 - `Exchange`
+
+`electricity` and `traffic` are shown only because parts of the original codebase still support them, but they are not bundled in this release.
+
+## Dataset Sources
+
+- `ETTh1`, `ETTh2`, `ETTm1`, `ETTm2`: ETT benchmark
+- `weather.csv`: standard LTSF weather benchmark distribution
+- `exchange_rate.csv`: standard LTSF exchange-rate benchmark distribution
+
+These are the exact CSV files used by the released code package.
+
+For bundled-file paths and source notes, see [data/README.md](data/README.md).
 
 ## Main Entry Point
 

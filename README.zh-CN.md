@@ -1,4 +1,4 @@
-# WPHeadMixer：代码与证据发布仓库
+# WPHeadMixer：代码、数据与证据发布仓库
 
 [English Version](README.md)
 
@@ -8,15 +8,16 @@
 
 该仓库面向公开发布与复现支持，保留了以下内容：
 
-- 查看公开代码实现，
-- 在本地准备数据后运行保留的论文复现实验脚本，
-- 将论文中的主要结论对应到仓库中的证据摘要文件与复现脚本。
+- 查看公开代码实现
+- 直接使用随仓库提供的六个 benchmark 数据集运行保留的复现实验脚本
+- 将论文中的主要结论对应到仓库中的证据摘要文件与复现脚本
 
 本仓库是一个**面向发布的精简快照**，不是完整的私有研究工作区镜像。
 
 ## 仓库结构
 
 - [code/wpheadmixer/](code/wpheadmixer/)：公开代码与发布版复现实验脚本
+- [code/wpheadmixer/data/](code/wpheadmixer/data/)：随仓库提供的六个 benchmark 数据集
 - [evidence/](evidence/)：支撑论文主要结论的摘要级证据文件
 - [paper_evidence_map.md](paper_evidence_map.md)：论文主要结论/表格与仓库证据的对应关系
 - [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md)：最小发布检查清单
@@ -39,28 +40,42 @@ pip install -r code/wpheadmixer/requirements.txt
 
 - [code/wpheadmixer/run_LTF.py](code/wpheadmixer/run_LTF.py)
 
-## 数据准备
+## 数据集
 
-本仓库**不包含数据集**。
+本仓库已经随代码提供这六个 benchmark 数据集：
 
-如需复现实验，请单独下载公开基准数据集，并按要求放入 [code/wpheadmixer/](code/wpheadmixer/) 下的 `data/` 目录。
+- `ETTh1`
+- `ETTh2`
+- `ETTm1`
+- `ETTm2`
+- `Weather`
+- `Exchange`
 
-数据目录格式与发布版复现实验脚本说明见：
+数据文件位于 [code/wpheadmixer/data/](code/wpheadmixer/data/)。
+
+各数据文件来源口径如下：
+
+- `ETTh1`、`ETTh2`、`ETTm1`、`ETTm2`：ETT（Electricity Transformer Temperature）benchmark
+- `weather.csv`：常用长序列预测 benchmark 中的 Weather 数据
+- `exchange_rate.csv`：常用长序列预测 benchmark 中的 Exchange Rate 数据
+
+更详细的数据目录和脚本说明见：
 
 - [code/wpheadmixer/readme.md](code/wpheadmixer/readme.md)
+- [code/wpheadmixer/data/README.md](code/wpheadmixer/data/README.md)
 
 ## 本发布包支持什么
 
 本仓库主要用于支持：
 
 - 检查公开代码实现
+- 直接运行保留的论文复现实验脚本
 - 重新生成保留的摘要级证据文件
 - 核对论文中的主要结论对应仓库中的哪些证据材料
 
 本仓库**不包含**：
 
 - 论文正文源文件
-- 原始数据集
 - 完整实验转储
 - 全量日志集合
 - 模型 checkpoint
@@ -87,7 +102,7 @@ pip install -r code/wpheadmixer/requirements.txt
 
 - 本发布包由更大的本地研究工作区整理而来。
 - 已保留的证据文件在公开前做了轻量清洗，去除了本地机器路径。
-- 当前版本只保留理解方法、检查代码和核对证据所需的核心内容。
+- 当前版本只保留理解方法、检查代码、使用六个核心 benchmark 数据集和核对证据所需的核心内容。
 
 ## 许可与第三方说明
 
@@ -103,6 +118,6 @@ pip install -r code/wpheadmixer/requirements.txt
   title   = {WPHeadMixer: A Wavelet-Patch Forecasting Framework with Modular Branch Heads for Long-Term Time Series Forecasting},
   author  = {Jianing Long and Jiangtao Yan},
   year    = {2026},
-  note    = {Code and evidence release}
+  note    = {Code, data, and evidence release}
 }
 ```

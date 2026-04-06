@@ -1,5 +1,18 @@
 # Ignore generated artifacts
-data/
+data/*
+!data/
+!data/ETT/
+!data/weather/
+!data/exchange_rate/
+data/ETT/*
+!data/ETT/ETTh1.csv
+!data/ETT/ETTh2.csv
+!data/ETT/ETTm1.csv
+!data/ETT/ETTm2.csv
+data/weather/*
+!data/weather/weather.csv
+data/exchange_rate/*
+!data/exchange_rate/exchange_rate.csv
 dataset/
 logs/
 results/
@@ -24,5 +37,4 @@ Thumbs.db
 # Large or non-source artifacts
 *.zip
 *.xlsx
-*.csv
 *.docx

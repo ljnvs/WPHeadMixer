@@ -17,6 +17,7 @@ This repository is a **curated release snapshot**, not a full private research w
 ## Repository Layout
 
 - [code/wpheadmixer/](code/wpheadmixer/) - released implementation and publication-facing utility scripts
+- [code/wpheadmixer/data/](code/wpheadmixer/data/) - bundled benchmark datasets used by the released paper package
 - [evidence/](evidence/) - retained summary evidence files used to support key paper claims
 - [paper_evidence_map.md](paper_evidence_map.md) - mapping from major paper claims/tables to repository evidence
 - [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md) - minimum publication checklist for this release package
@@ -41,13 +42,31 @@ The main experiment entry point is:
 
 ## Data Preparation
 
-Datasets are **not included** in this repository.
+The six benchmark datasets used by the released paper package are already bundled in this repository:
 
-Download the required public benchmark datasets separately and place them under the expected `data/` directory inside [code/wpheadmixer/](code/wpheadmixer/).
+- `ETTh1`
+- `ETTh2`
+- `ETTm1`
+- `ETTm2`
+- `Weather`
+- `Exchange`
 
-For the expected dataset layout and the publication-facing reproduction scripts, see:
+They are stored under [code/wpheadmixer/data/](code/wpheadmixer/data/).
+
+For the expected dataset layout, bundled file names, dataset-source notes, and publication-facing reproduction scripts, see:
 
 - [code/wpheadmixer/readme.md](code/wpheadmixer/readme.md)
+- [code/wpheadmixer/data/README.md](code/wpheadmixer/data/README.md)
+
+## Dataset Sources
+
+The bundled six-dataset subset follows the standard long-term time series forecasting benchmark setup used in the released code:
+
+- `ETTh1`, `ETTh2`, `ETTm1`, `ETTm2`: Electricity Transformer Temperature (ETT) benchmark distributed through the ETT dataset repository and widely used in Informer/Autoformer-style LTSF evaluation.
+- `Weather`: weather benchmark CSV distributed in the common LTSF benchmark bundles; the variables correspond to the Jena climate weather measurements commonly used by this benchmark line.
+- `Exchange`: exchange-rate benchmark CSV distributed in the common multivariate time-series benchmark collections used by prior LTSF baselines.
+
+The repository bundles the exact CSV files used by the released code package for convenience and reproducibility.
 
 ## Reproduction Scope
 
@@ -60,7 +79,6 @@ This release is intended to support:
 This release does **not** include:
 
 - the manuscript source,
-- raw datasets,
 - full experiment dumps,
 - complete log collections,
 - model checkpoints,

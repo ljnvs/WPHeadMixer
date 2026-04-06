@@ -17,6 +17,13 @@ Repository support:
 - wavelet decomposition and reconstruction: [code/wpheadmixer/models/decomposition.py](code/wpheadmixer/models/decomposition.py)
 - KAN layer implementation: [code/wpheadmixer/kan.py](code/wpheadmixer/kan.py)
 
+## 1A. Bundled Benchmark Data
+
+Repository support:
+
+- bundled benchmark CSVs: [code/wpheadmixer/data/ETT/ETTh1.csv](code/wpheadmixer/data/ETT/ETTh1.csv), [code/wpheadmixer/data/ETT/ETTh2.csv](code/wpheadmixer/data/ETT/ETTh2.csv), [code/wpheadmixer/data/ETT/ETTm1.csv](code/wpheadmixer/data/ETT/ETTm1.csv), [code/wpheadmixer/data/ETT/ETTm2.csv](code/wpheadmixer/data/ETT/ETTm2.csv), [code/wpheadmixer/data/weather/weather.csv](code/wpheadmixer/data/weather/weather.csv), [code/wpheadmixer/data/exchange_rate/exchange_rate.csv](code/wpheadmixer/data/exchange_rate/exchange_rate.csv)
+- data layout description: [code/wpheadmixer/readme.md](code/wpheadmixer/readme.md)
+
 ## 2. Main Benchmark Table
 
 Paper role:
