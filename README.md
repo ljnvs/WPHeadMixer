@@ -93,16 +93,3 @@ For a structured claim-to-evidence index, see:
 
 - The project code retains the license file at [code/wpheadmixer/LICENSE](code/wpheadmixer/LICENSE).
 - Vendored wavelet dependency code is retained under [code/wpheadmixer/pytorch_wavelets/](code/wpheadmixer/pytorch_wavelets/), including its own license file.
-
-## Citation
-
-If you use this repository or its companion materials, please cite the corresponding paper.
-
-```bibtex
-@article{wpheadmixer_companion,
-  title   = {WPHeadMixer: A Wavelet-Patch Forecasting Framework with Modular Branch Heads for Long-Term Time Series Forecasting},
-  author  = {Jianing Long and Jiangtao Yan},
-  year    = {2026},
-  note    = {Code and evidence release}
-}
-```
