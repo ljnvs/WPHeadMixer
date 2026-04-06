@@ -1,0 +1,28 @@
+# Ignore generated artifacts
+data/
+dataset/
+logs/
+results/
+checkpoints/
+test_results/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# Local/temp files
+*.ini
+*.bak
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# Large or non-source artifacts
+*.zip
+*.xlsx
+*.csv
+*.docx
